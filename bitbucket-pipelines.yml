@@ -1,0 +1,9 @@
+# You can use a Docker image from Docker Hub or your own container
+# registry for your build environment.
+image: ntnng/sfdc
+pipelines: 
+  default: 
+    - step: 
+        script: 
+          - echo "Starting tests"
+          - ant -buildfile build/build.xml
